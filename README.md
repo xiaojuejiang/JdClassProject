@@ -9,9 +9,7 @@ node + vue  + vue-router+ mui +  zepto  +  less + ES6/7
 ## 每日任务
 
 - [x]后台接口
-
 - [x]首页静态页面
-
 - [x]分类静态页面
 
 
