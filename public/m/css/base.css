@@ -1,10 +1,41 @@
-/* 公共样式 */
+/* base.css 公共样式 */
+
+@font-face {
+  font-family: "iconfont";
+  src:
+  	url('../assets/mui/iconfont/iconfont.ttf?t=1517033951890') format('truetype');
+  
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-daohanggouwuche:before { content: "\e607"; }
+
+body, .mui-content {
+  background: #FFF;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: #000;
+}
 
 .my-header {
 	background: #006699;
 }
 
-.my-header h1 {
+.my-header .mui-title {
 	color: #FFF;
 }
 
@@ -20,18 +51,8 @@
 	color: #FFF;
 }
 
-.my-footer .mui-tab-item.mui-active {
+.my-footer .mui-active.mui-tab-item {
 	color: darkorange;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-a {
-  color: #000;
 }
 
 .nav-links {

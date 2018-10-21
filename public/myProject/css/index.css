@@ -1,3 +1,116 @@
 .my-header {
   background-color: #e92322;
 }
+.my-header h1 {
+  color: #fff;
+}
+.my-header .mui-icon-search {
+  color: #fff;
+}
+.my-footer {
+  background: #e92322;
+}
+.my-footer .mui-tab-item {
+  color: #FFF;
+}
+.my-footer .mui-tab-item.mui-active {
+  color: darkorange;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*导航链接*/
+.nav-link {
+  padding: 10px;
+}
+.nav-link > a {
+  width: 33.33%;
+  float: left;
+}
+.nav-link > a > img {
+  width: 100%;
+}
+/*品牌导航*/
+.brand {
+  width: 100%;
+  padding: 0 10px;
+}
+.brand > img {
+  width: 100%;
+}
+.brand > ul {
+  padding: 10px 0 5px;
+  width: 100%;
+}
+.brand > ul > li {
+  float: left;
+  width: 25%;
+  padding-bottom: 5px;
+}
+.brand > ul > li > a {
+  display: block;
+  width: 100%;
+}
+.brand > ul > li > a > img {
+  width: 100%;
+  vertical-align: top;
+}
+/*生活专区*/
+.product {
+  width: 100%;
+  padding: 0 5px;
+}
+.product > img {
+  width: 100%;
+}
+.product > ul {
+  padding: 6px 0;
+}
+.product > ul > li {
+  padding: 5px;
+  width: 50%;
+  float: left;
+}
+.product > ul > li > a {
+  display: block;
+  padding: 5px;
+  box-shadow: 0 0 5px #ccc;
+}
+.product > ul > li > a > img {
+  width: 100%;
+}
+.product > ul > li > a > span:first-of-type {
+  display: block;
+  height: 38px;
+  color: #8f8f94;
+  padding: 5px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+.product > ul > li > a > p {
+  padding-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.product > ul > li > a > p > span:first-of-type {
+  color: #e92322;
+}
+.product > ul > li > a > p > span:last-of-type {
+  color: #8f8f94;
+  text-decoration: line-through;
+}
+.product > ul > li > a > span:last-of-type {
+  display: block;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #e92322;
+  color: #fff;
+  margin: 0 auto 5px;
+  border-radius: 5px;
+}
