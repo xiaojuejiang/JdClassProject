@@ -1,0 +1,56 @@
+.container {
+	padding: 10px;
+}
+
+.search {
+	width: 100%;
+	height: 30px;
+	border: 1px solid #006699;
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.search input[type="text"] {
+	width: 100%;
+	height: 30px;
+	padding-right: 70px;
+	border: none;
+	background: none;
+	margin: 0;
+	font-size: 14px;
+	color: #474747;
+}
+
+.search input[type="button"] {
+	width: 60px;
+	height: 28px;
+	background: #006699;
+	color: #FFF;
+	border: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-radius: 0;
+}
+
+
+.history-top {
+	color: #8f8f94;
+	font-size: 14px;
+	padding-bottom: 15px;
+}
+
+.history-top .title {
+
+}
+
+.history-top .clear {
+	font-size: 14px;
+	line-height: normal;
+}
+
+.history-top .mui-icon-trash:before {
+	margin-right: 4px;
+}
+
+
