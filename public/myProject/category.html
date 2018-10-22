@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.css">
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="./assets/zepto/zepto.min.js"></script>  
+    <script src="./assets/art-template/template-web.js"></script>
     <script src="./js/category.js"></script>
 </head>
 
@@ -44,54 +45,18 @@
             <div class="content-left">
                 <div class="mui-scroll-wrapper">
                     <div class="mui-scroll">
-                        <!--这里放置真实显示的DOM内容-->
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
+                        <!-- 这里放置真实显示的DOM内容 -->
+                       <!-- <div class="link">
+                           <a href="javascript:;" class="active">
+                               运动馆
+                           </a>
+                           <a href="javascript:;">
+                            运动馆
+                        </a>
+                        <a href="javascript:;">
+                            运动馆
+                        </a>
+                       </div> -->
                     </div>
                 </div>
             </div>
@@ -99,58 +64,30 @@
                 <div class="mui-scroll-wrapper">
                     <div class="mui-scroll">
                         <!--这里放置真实显示的DOM内容-->
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
-                        1 <br>
+                        <div class="brand-list">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;">
+                                        <img src="./images/brand1.png" alt="">
+                                        <p>耐克</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/html" id="first-category">
+        <div class="link" >
+        {{each rows}}
+            <a href="javascript:;" class="">
+                {{$value.categoryName}}
+            </a>
+        {{/each}}
+        </div>
+    </script>
 </body>
 
 </html>

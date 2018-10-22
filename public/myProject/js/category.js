@@ -7,6 +7,9 @@ $(function () {
         type:'get',
         success:function (response) {
             console.log(response);
+            var html=template('first-category',response);
+            console.log(html);
+            $('.content-left .mui-scroll').html(html);
         }
     })
 })
