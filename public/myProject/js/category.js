@@ -37,9 +37,12 @@ $(function () {
         })
     }
     //注册一级菜单的点击事件
-    $('#link').on('click','a',function(){
+    mui('#link').on('tap','a',function(){
         var id=$(this).attr('data-id');
         $(this).addClass('active').siblings().removeClass('active');
         getSecond(id);
-    })
+    });
+    mui('body').on('tap','a',function(){
+        window.top.location.href=this.href;
+    });
 })
