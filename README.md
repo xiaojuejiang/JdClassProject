@@ -4,13 +4,16 @@
 
 ## 技术栈
 
-node + vue  + vue-router+ mui +  zepto  +  less + ES6/7 
+node + vue + router + vue-router+ mui +  zepto  +  less + ES6/7 
 
 ## 每日任务
 
 - [x] 后台接口
 - [x] 首页静态页面
 - [x] 分类静态页面
+- [x] 数据导入
+- [x] 分类页面数据对接
+- [x] mui屏蔽A标签跳转
 
 
 
