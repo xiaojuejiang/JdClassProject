@@ -1,0 +1,72 @@
+.my-header {
+  background-color: #e92322;
+}
+.my-header h1 {
+  color: #fff;
+}
+.my-header .mui-icon-search {
+  color: #fff;
+}
+.my-footer {
+  background: #e92322;
+}
+.my-footer .mui-tab-item {
+  color: #FFF;
+}
+.my-footer .mui-tab-item.mui-active {
+  color: darkorange;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background-color: #fff;
+}
+.mui-content {
+  padding-bottom: 44px;
+  background-color: #fff;
+}
+.mui-content .container {
+  padding: 10px;
+}
+.mui-content .container .search {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #e92322;
+  margin-bottom: 15px;
+}
+.mui-content .container .search input:first-of-type {
+  height: 28px;
+  border: 0;
+  margin-bottom: 0;
+  padding-right: 70px;
+  font-size: 14px;
+  color: #666;
+}
+.mui-content .container .search input:last-of-type {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 28px;
+  border: none;
+  background-color: #e92322;
+  border-radius: 0;
+  color: #fff;
+}
+.mui-content .container .history-top {
+  font-size: 14px;
+  color: #8f8f94;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+.mui-content .container .history-top > span:last-of-type {
+  font-size: 14px;
+}
+.mui-content .container .history-top > span:last-of-type::before {
+  padding-right: 5px;
+}

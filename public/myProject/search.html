@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/search.css">
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/art-template/template-web.js"></script>
+    <script src="./js/search.js"></script>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav my-header">
+        <h1 class="mui-title">搜索中心</h1>
+        <a class="mui-icon mui-icon-search mui-pull-right"></a>
+    </header>
+    <nav class="mui-bar mui-bar-tab my-footer">
+        <a class="mui-tab-item mui-active" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <div class="mui-content">
+        <div class="container">
+            <div class="search">
+                <input type="text" placeholder="请输入您喜欢的商品">
+                <input type="button" value="搜索" id="search">
+            </div>
+            <div class="history-top mui-clearfix">
+                <span class="mui-pull-left">搜索历史</span>
+                <span id="clearHistory" class="mui-pull-right mui-icon mui-icon-trash">清空历史</span>
+            </div>
+            <ul class="mui-table-view">
+                <!-- <li class="mui-table-view-cell">1
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <script type="text/html" id='historyList'>
+        {{each keyArr}}
+            <li class="mui-table-view-cell">{{$value}}</li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

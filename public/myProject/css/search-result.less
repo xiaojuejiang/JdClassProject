@@ -1,0 +1,80 @@
+@import 'commen.less';
+
+body{
+    background-color: #fff;
+}
+.mui-content{
+    background-color: #fff;
+    padding:44px 0 50px; 
+    width: 100%;
+    .filter{
+        margin: 10px 10px 0;
+        text-align: center;
+        span{
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px;
+            background-color: #efeff4;
+            display: block;
+            &::before{
+                content: '';
+            }
+            &::after{
+                content: '\e581';
+            }
+        }
+    }
+    .product{
+        width: 100%;
+        padding: 0 5px;
+        >ul{
+            padding: 6px 0;
+            >li{
+                padding: 5px;
+                width: 50%;
+                float: left;
+                >a{
+                    display: block;
+                    padding: 5px;
+                    box-shadow: 0 0 5px #ccc;
+                    >img{
+                        width: 100%;
+                    }
+                    >span:first-of-type{
+                        display: block;
+                        height: 38px;
+                        color: #8f8f94;
+                        padding: 5px;
+                        line-height: 18px;
+                        text-align: center;
+                        font-size: 14px;
+                        overflow: hidden;
+                    }
+                    >p{
+                        padding-top: 5px;
+                        margin-bottom: 10px;
+                        text-align: center;
+                        >span:first-of-type{
+                            color: @color;
+                        }
+                        >span:last-of-type{
+                            color: #8f8f94;
+                            text-decoration: line-through;
+                        }
+                    }
+                    >span:last-of-type{
+                        display: block;
+                        width: 80px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        background-color: @color;
+                        color: #fff;
+                        margin: 0 auto 5px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
