@@ -20,11 +20,11 @@
 		<h1 class="mui-title">搜索结果</h1>
 	</header>
 	<nav class="mui-bar mui-bar-tab my-footer">
-		<a class="mui-tab-item mui-active" href="index.html">
+		<a class="mui-tab-item" href="index.html">
 			<span class="mui-icon mui-icon-home"></span>
 			<span class="mui-tab-label">首页</span>
 		</a>
-		<a class="mui-tab-item" href="category.html">
+		<a class="mui-tab-item mui-active" href="category.html">
 			<span class="mui-icon mui-icon-bars"></span>
 			<span class="mui-tab-label">分类</span>
 		</a>
@@ -37,18 +37,19 @@
 			<span class="mui-tab-label">会员中心</span>
 		</a>
 	</nav>
-	<div class="mui-content">
-		<div class="mui-row filter">
+	<div id="refreshContainer">
+		<div class="container">
+			<div class="mui-row filter">
 			<div class="mui-col-xs-6">
-				<span class="mui-icon mui-icon-arrowdown">价格</span>
+				<span class="mui-icon mui-icon-arrowdown" id="price">价格</span>
 			</div>
 			<div class="mui-col-xs-6">
-				<span class="mui-icon mui-icon-arrowdown">销量</span>
+				<span class="mui-icon mui-icon-arrowdown" id="sales">销量</span>
 			</div>
-		</div>
-		<div class="product">
+			</div>
+			<div class="product">
 			<ul class="mui-clearfix">
-				<li>
+				<!-- <li>
 					<a href="javascript:;">
 						<img src="./images/product.jpg" alt="">
 						<span>
@@ -60,15 +61,16 @@
 						</p>
 						<span class="buy-now">立即购买</span>
 					</a>
-				</li>
+				</li> -->
 			</ul>
+			</div>
 		</div>
 	</div>
 	<script	type="text/html" id="product">
 		{{each data}}
 		<li>
 			<a href="javascript:;">
-				<img src="./images/product.jpg" alt="">
+				<img src="{{$value.pic[0].picAddr}}" alt="">
 				<span>
 					{{$value.proName}}
 				</span>

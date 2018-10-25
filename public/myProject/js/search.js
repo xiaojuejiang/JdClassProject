@@ -24,4 +24,8 @@ $(function () {
         $('.mui-table-view').html('');
         keyArr=[];
     })
+    mui('body').on('tap','a',function(){
+        console.log(this);
+        location.href=this.href;
+    })
 })

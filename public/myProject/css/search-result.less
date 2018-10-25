@@ -1,11 +1,20 @@
 @import 'commen.less';
 
+// * { 
+//     touch-action: pan-y; 
+// } 
 body{
     background-color: #fff;
 }
-.mui-content{
+#refreshContainer{
+    position: absolute;
+    top: 44px;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+}
+.container{
     background-color: #fff;
-    padding:44px 0 50px; 
     width: 100%;
     .filter{
         margin: 10px 10px 0;
@@ -26,7 +35,7 @@ body{
     }
     .product{
         width: 100%;
-        padding: 0 5px;
+        padding: 0 10px;
         >ul{
             padding: 6px 0;
             >li{

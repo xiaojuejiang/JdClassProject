@@ -11,10 +11,10 @@
   background: #e92322;
 }
 .my-footer .mui-tab-item {
-  color: #FFF;
+  color: #fff;
 }
 .my-footer .mui-tab-item.mui-active {
-  color: darkorange;
+  color: blue;
 }
 ul,
 li {

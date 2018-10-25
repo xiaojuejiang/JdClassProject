@@ -14,6 +14,8 @@ node + vue + router + vue-router+ mui +  zepto  +  less + ES6/7
 - [x] 数据导入
 - [x] 分类页面数据对接
 - [x] mui屏蔽A标签跳转
+- [x] 用户界面完成
+- [x] 用户注册与登录功能完成
 
 
 

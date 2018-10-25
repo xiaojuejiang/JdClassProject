@@ -22,3 +22,27 @@ li {
   padding: 0;
   list-style: none;
 }
+body {
+  background-color: #fff;
+}
+.my-header {
+  background-color: #e92322;
+}
+.my-header h1 {
+  color: #fff;
+}
+.my-header .mui-icon-back {
+  color: #fff;
+}
+#cont {
+  background-color: #fff;
+  padding-bottom: 0;
+}
+.register {
+  padding: 10px 0;
+}
+.register span {
+  padding: 10px;
+  color: blue;
+  font-size: 14px;
+}

@@ -11,10 +11,10 @@
   background: #e92322;
 }
 .my-footer .mui-tab-item {
-  color: #FFF;
+  color: #fff;
 }
 .my-footer .mui-tab-item.mui-active {
-  color: darkorange;
+  color: blue;
 }
 ul,
 li {
@@ -25,49 +25,55 @@ li {
 body {
   background-color: #fff;
 }
-.mui-content {
-  background-color: #fff;
-  padding: 44px 0 50px;
+#refreshContainer {
+  position: absolute;
+  top: 44px;
+  bottom: 50px;
+  left: 0;
   width: 100%;
 }
-.mui-content .filter {
+.container {
+  background-color: #fff;
+  width: 100%;
+}
+.container .filter {
   margin: 10px 10px 0;
   text-align: center;
 }
-.mui-content .filter span {
+.container .filter span {
   height: 35px;
   line-height: 35px;
   font-size: 14px;
   background-color: #efeff4;
   display: block;
 }
-.mui-content .filter span::before {
+.container .filter span::before {
   content: '';
 }
-.mui-content .filter span::after {
+.container .filter span::after {
   content: '\e581';
 }
-.mui-content .product {
+.container .product {
   width: 100%;
-  padding: 0 5px;
+  padding: 0 10px;
 }
-.mui-content .product > ul {
+.container .product > ul {
   padding: 6px 0;
 }
-.mui-content .product > ul > li {
+.container .product > ul > li {
   padding: 5px;
   width: 50%;
   float: left;
 }
-.mui-content .product > ul > li > a {
+.container .product > ul > li > a {
   display: block;
   padding: 5px;
   box-shadow: 0 0 5px #ccc;
 }
-.mui-content .product > ul > li > a > img {
+.container .product > ul > li > a > img {
   width: 100%;
 }
-.mui-content .product > ul > li > a > span:first-of-type {
+.container .product > ul > li > a > span:first-of-type {
   display: block;
   height: 38px;
   color: #8f8f94;
@@ -77,19 +83,19 @@ body {
   font-size: 14px;
   overflow: hidden;
 }
-.mui-content .product > ul > li > a > p {
+.container .product > ul > li > a > p {
   padding-top: 5px;
   margin-bottom: 10px;
   text-align: center;
 }
-.mui-content .product > ul > li > a > p > span:first-of-type {
+.container .product > ul > li > a > p > span:first-of-type {
   color: #e92322;
 }
-.mui-content .product > ul > li > a > p > span:last-of-type {
+.container .product > ul > li > a > p > span:last-of-type {
   color: #8f8f94;
   text-decoration: line-through;
 }
-.mui-content .product > ul > li > a > span:last-of-type {
+.container .product > ul > li > a > span:last-of-type {
   display: block;
   width: 80px;
   height: 30px;
