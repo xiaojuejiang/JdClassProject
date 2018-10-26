@@ -16,6 +16,10 @@ node + vue + router + vue-router+ mui +  zepto  +  less + ES6/7
 - [x] mui屏蔽A标签跳转
 - [x] 用户界面完成
 - [x] 用户注册与登录功能完成
+- [x] 地址栏详情页
+- [x] 地址栏添加功能
+- [x] 地址栏删除功能
+- [x] 地址栏修改功能
 
 
 
