@@ -1,0 +1,50 @@
+.my-header {
+  background-color: #e92322;
+}
+.my-header h1 {
+  color: #fff;
+}
+.my-header .mui-icon-search {
+  color: #fff;
+}
+.my-footer {
+  background: #e92322;
+}
+.my-footer .mui-tab-item {
+  color: #fff;
+}
+.my-footer .mui-tab-item.mui-active {
+  color: blue;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background-color: #fff;
+}
+.my-header {
+  background-color: #e92322;
+}
+.my-header h1 {
+  color: #fff;
+}
+.my-header .mui-icon-back {
+  color: #fff;
+}
+.mui-content {
+  background-color: #fff;
+}
+.mui-content #title {
+  margin-top: 0;
+  text-align: center;
+}
+.mui-content #title .mui-navigate-right-x {
+  font-size: 14px;
+}
+.mui-content .addList span {
+  font-size: 14px;
+  color: #000;
+}
