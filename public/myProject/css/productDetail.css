@@ -1,0 +1,116 @@
+.my-header {
+  background-color: #e92322;
+}
+.my-header h1 {
+  color: #fff;
+}
+.my-header .mui-icon-search {
+  color: #fff;
+}
+.my-footer {
+  background: #e92322;
+}
+.my-footer .mui-tab-item {
+  color: #fff;
+}
+.my-footer .mui-tab-item.mui-active {
+  color: blue;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*导航链接*/
+body {
+  background-color: #fff;
+}
+.mui-scroll-wrapper {
+  background-color: #fff;
+  top: 44px;
+  bottom: 50px;
+}
+.mui-scroll-wrapper .detail-title {
+  padding: 10px;
+  font-size: 16px;
+}
+.mui-scroll-wrapper .detail-price {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+.mui-scroll-wrapper .detail-price .new {
+  font-size: 24px;
+  color: #e92322;
+  padding-right: 10px;
+}
+.mui-scroll-wrapper .detail-price .old {
+  font-size: 12px;
+  color: #ccc;
+  text-decoration: line-through;
+}
+.mui-scroll-wrapper .detail-size {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.mui-scroll-wrapper .detail-size span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  line-height: 28px;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.mui-scroll-wrapper .detail-size .active {
+  background: #fa672d;
+  color: #FFF;
+}
+.mui-scroll-wrapper .detail-num {
+  padding: 10px;
+}
+.mui-scroll-wrapper .detail-num span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  line-height: 28px;
+  text-align: center;
+}
+.mui-scroll-wrapper .detail-num input {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  vertical-align: top;
+  text-align: center;
+}
+.mui-scroll-wrapper .detail-num i {
+  font-style: normal;
+}
+.mui-scroll-wrapper .detail-buttons {
+  padding: 10px;
+}
+.mui-scroll-wrapper .detail-buttons a,
+.mui-scroll-wrapper .detail-buttons span {
+  display: inline-block;
+  width: 50%;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #FFF;
+}
+.mui-scroll-wrapper .detail-buttons a {
+  background-color: #fa672d;
+}
+.mui-scroll-wrapper .detail-buttons span {
+  background-color: #991020;
+}

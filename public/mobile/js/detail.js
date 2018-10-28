@@ -33,7 +33,6 @@ $(function(){
 
 				console.log(result)
 
-
 				var gallery = mui('.mui-slider');
 
 				gallery.slider();

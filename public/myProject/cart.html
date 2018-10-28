@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.picker.css">
+    <link rel="stylesheet" href="assets/mui/css/mui.poppicker.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/mui/js/mui.picker.js"></script>
+    <script src="assets/mui/js/mui.poppicker.js"></script>
+    <script src="./assets/art-template/template-web.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./js/cart.js"></script>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav my-header">
+        <h1 class="mui-title">购物车</h1>
+        <a class="mui-icon mui-icon-back mui-pull-left"></a>
+    </header>
+    <nav class="mui-bar mui-bar-tab my-footer">
+        <a class="mui-tab-item" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item mui-active" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <div class="mui-content">
+        <ul class="mui-table-view" id="addList">
+
+            <!-- <li class="mui-table-view-cell mui-transitioning">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-blue editAddress">编辑</a>
+                    <a class="mui-btn mui-btn-red delAddress">删除</a>
+                </div>
+                <div class="mui-slider-handle" style="transform: translate(0px, 0px);">
+                    <div class="mui-table-cell">
+                        <a href="javascript:;">
+                            <img class="mui-media-object mui-pull-left" src="./images/detail.jpg">
+                            <div class="mui-media-body">
+                                <p>
+                                    【莹恋】MIZUNO美津浓V1GA159002乒乓球鞋男鞋女鞋室内综合训练鞋
+                                </p>
+                                <div class="mui-row">
+                                    <div class="mui-col-sm-6">
+                                        <input type="checkbox">
+                                        <span class="price-1">¥112</span>
+                                        <span class="price-2 gray">¥342</span>
+                                    </div>
+                                    <div class="mui-col-sm-4">
+                                        <span class="gray">鞋码：36</span>
+                                    </div>
+                                    <div class="mui-col-sm-2">
+                                        <span class="gray">x1双</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+        <h4 class="total">订单总额：¥110</h4>
+        
+    </div>
+    <script type="text/html" id="cartTpl">
+        {{each result}}
+        <li class="mui-table-view-cell mui-transitioning">
+                <div class="mui-slider-right mui-disabled">
+                    <a href="javascript:;" data-id="{{$value.id}}" class="mui-btn mui-btn-blue editAddress">编辑</a>
+                    <a href="javascript:;" data-id="{{$value.id}}" class="mui-btn mui-btn-red delAddress">删除</a>
+                </div>
+                <div class="mui-slider-handle" style="transform: translate(0px, 0px);">
+                    <div class="mui-table-cell">
+                        <a href="javascript:;">
+                            <img class="mui-media-object mui-pull-left" src="./images/detail.jpg">
+                            <div class="mui-media-body">
+                                <p>
+                                    {{$value.proName}}
+                                </p>
+                                <div class="mui-row">
+                                    <div class="mui-col-sm-6">
+                                        <input type="checkbox">
+                                        <span class="price-1">¥{{$value.price}}</span>
+                                        <span class="price-2 gray">¥{{$value.oldPrice}}</span>
+                                    </div>
+                                    <div class="mui-col-sm-4">
+                                        <span class="gray">鞋码：{{$value.size}}</span>
+                                    </div>
+                                    <div class="mui-col-sm-2">
+                                        <span class="gray">x{{$value.num}}双</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+    </script>
+    <script id="detailTpl" type="text/html">
+        <div class="detail-box">
+            <div class="detail-size">
+                    尺码:
+                    {{each sizeArr}}
+                        <span>{{$value}}</span>
+                    {{/each}}
+                </div>
+                <div class="detail-num">
+                    数量：
+                    <span class="reduce">-</span>
+                    <input type="text" class="num" value="{{num}}">
+                    <span class="plus">+</span>
+                    剩余：
+                    <i>{{productNum}}</i>
+                    件
+                </div>
+        </div>
+    </script>
+</body>
+
+</html>

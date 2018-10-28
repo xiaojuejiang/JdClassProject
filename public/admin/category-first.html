@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/system.css">
 	<script src="assets/jquery/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="assets/artTemplate/template.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/category-first.js"></script>
 </head>
@@ -63,7 +63,7 @@
 	                </div>
 	                <ul class="nav navbar-nav navbar-right">
 	                    <li>
-	                        <a href="javascript:;" class="login_out_bot">
+	                        <a id="logout" href="javascript:;" class="login_out_bot">
 	                            <i class="fa fa-sign-out"></i> 退出
 	                        </a>
 	                    </li>
@@ -72,13 +72,20 @@
 	        </div>
 	        <div class="body">
 	        	<button class="operation btn btn-primary" data-toggle="modal" data-target=".category-first">添加分类</button>
-	        	<table class="table table-bordered" id="categoryBox">
-	        		
+	        	<table class="table table-bordered" id="listBox">
+	        		<!-- <tr>
+	        			<th>分类的编号</th>
+	        			<th>分类名称</th>
+	        		</tr>
+	        		<tr>
+	        			<td>1</td>
+	        			<td>运动馆</td>
+	        		</tr> -->
 	        	</table>
-				<div class="btn-group page">
-					<div class="btn btn-default" id="prevBtn">上一页</div>
-					<div class="btn btn-default" id="nextBtn">下一页</div>
-				</div>
+	        	<div class="btn-group page">
+	        		<div id='perv' class="btn btn-default">上一页</div>
+	        		<div id='next' class="btn btn-default">下一页</div>
+	        	</div>
 	        </div>
 		</div>
 	</div>
@@ -92,28 +99,27 @@
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="请输入分类的名称" id="categoryName">
+						<input id="categoryName" type="text" class="form-control" placeholder="请输入分类的名称">
 					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary" id="addCategory">保存</button>
+					<button id="addCategory" type="button" class="btn btn-primary">保存</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<script id="categoryTpl" type="text/html">
+	<script type="text/html" id="listTpl">
 		<tr>
 			<th>分类的编号</th>
 			<th>分类名称</th>
 		</tr>
-		<% for(var i=0;i<data.rows.length;i++){ %>
-			<tr>
-				<td><%=data.rows[i].id %></td>
-				<td><%=data.rows[i].categoryName %></td>
-			</tr>
-		<% } %>
+		{{each rows}}
+		<tr>
+			<td>{{$value.id}}</td>
+			<td>{{$value.categoryName}}</td>
+		</tr>
+		{{/each}}
 	</script>
 </body>
 </html>

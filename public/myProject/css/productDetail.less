@@ -1,0 +1,94 @@
+@import "./commen.less";
+/*导航链接*/
+
+body {
+  background-color: #fff;
+}
+.mui-scroll-wrapper {
+  background-color: #fff;
+  top: 44px;
+  bottom: 50px;
+  .detail-title {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .detail-price {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    .new {
+      font-size: 24px;
+      color: @color;
+      padding-right: 10px;
+    }
+    .old {
+      font-size: 12px;
+      color: #ccc;
+      text-decoration: line-through;
+    }
+  }
+  .detail-size {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    span {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border: 1px solid #ccc;
+      line-height: 28px;
+      text-align: center;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .active{
+      background: #fa672d;
+      color: #FFF;
+    }
+  }
+  .detail-num{
+      padding: 10px;
+      span{
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        border: 1px solid #ccc;
+        line-height: 28px;
+        text-align: center;
+      }
+      input{
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        line-height: normal;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        vertical-align: top;
+        text-align: center;
+      }
+      i{
+          font-style: normal;
+      }
+  }
+  .detail-buttons{
+      padding: 10px;
+      a,span{
+        display: inline-block;
+        width: 50%;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        color: #FFF;
+      }
+      a{
+          background-color: #fa672d;
+      }
+      span{
+        background-color: #991020;
+      }
+      
+  }
+}

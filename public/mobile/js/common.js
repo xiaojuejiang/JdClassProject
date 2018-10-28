@@ -19,7 +19,7 @@ function getCheckCode(){
 
 	$.ajax({
 		type:'get',
-		url:'/user/vCode',
+		url:'/user/vCodeForUpdatePassword',
 		success:function(result){
 			alert(result.vCode)
 		}

@@ -69,7 +69,7 @@
 	<script	type="text/html" id="product">
 		{{each data}}
 		<li>
-			<a href="javascript:;">
+			<a href="productDetail.html?id={{$value.id}}">
 				<img src="{{$value.pic[0].picAddr}}" alt="">
 				<span>
 					{{$value.proName}}

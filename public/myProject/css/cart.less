@@ -1,0 +1,89 @@
+@import 'commen.less';
+
+body{
+    background-color: #fff;
+}
+.my-header{
+    background-color: @color;
+    h1{
+        color:#fff;
+    }
+    .mui-icon-back{
+        color: #ffffff;
+    }
+}
+.mui-content{
+    background-color: #fff;
+    .mui-row{
+        .gray{
+            color:#8f8f94;
+            font-size: 14px;
+        }
+        .price-1{
+            font-size: 14px;
+            color: @color;
+        }
+        .price-2{
+            text-decoration: line-through;
+        }
+    }
+    #addList{
+        margin-top: 0;
+    }
+    .total{
+        padding: 15px;
+    }
+    
+}
+.detail-box{
+    text-align: center;
+    p{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .detail-size {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        span {
+          display: inline-block;
+          width: 28px;
+          height: 28px;
+          border: 1px solid #ccc;
+          line-height: 28px;
+          text-align: center;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+        .active{
+          background: #fa672d;
+          color: #FFF;
+        }
+      }
+      .detail-num{
+          padding: 10px 0;
+          span{
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border: 1px solid #ccc;
+            line-height: 28px;
+            text-align: center;
+          }
+          input{
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            line-height: normal;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+            vertical-align: top;
+            text-align: center;
+          }
+          i{
+              font-style: normal;
+          }
+      }
+}

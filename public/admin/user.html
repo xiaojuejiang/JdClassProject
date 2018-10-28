@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>乐淘-用户管理</title>
+	<title>云购-用户管理</title>
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/system.css">
 	<script src="assets/jquery/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="assets/artTemplate/template.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/user.js"></script>
 </head>
@@ -63,7 +63,7 @@
 	                </div>
 	                <ul class="nav navbar-nav navbar-right">
 	                    <li>
-	                        <a href="javascript:;" class="login_out_bot" id="loginOut">
+	                        <a id="logout" href="javascript:;" class="login_out_bot">
 	                            <i class="fa fa-sign-out"></i> 退出
 	                        </a>
 	                    </li>
@@ -71,34 +71,42 @@
 	            </nav>
 	        </div>
 	        <div class="body">
-	        	<table class="table table-bordered" id="userBox">
-	        		
+	        	<table class="table table-bordered" id="userList">
+	        		<!-- <tr>
+	        			<th>用户名</th>
+	        			<th>电话</th>
+	        			<th>状态</th>
+	        			<th>操作</th>
+	        		</tr>
+	        		<tr>
+	        			<td>18500000000</td>
+	        			<td>18500000000</td>
+	        			<td>已启用</td>
+	        			<td>
+	        				<button type="button" class="btn btn-danger">禁用</button>
+	        			</td>
+	        		</tr> -->
 	        	</table>
 	        </div>
 		</div>
 	</div>
-	<script id="userTpl" type="text/html">
+	<script type="text/html" id="employeeTpl">
 		<tr>
 			<th>用户名</th>
 			<th>电话</th>
 			<th>状态</th>
 			<th>操作</th>
 		</tr>
-		<% for(var i=0;i<data.rows.length;i++){ %>
-			<tr>
-				<td><%=data.rows[i].username %></td>
-				<td><%=data.rows[i].mobile %></td>
-				<td>已启用</td>
-				<td>
-					<button 
-					data-id="<%=data.rows[i].id%>"
-					data-isDelete="<%=data.rows[i].isDelete %>"
-					type="button"
-					id="deleteBtn"
-					class="btn <%=data.rows[i].isDelete ? 'btn-danger' : 'btn-success' %>"><%=data.rows[i].isDelete ? '禁用' : '启用' %></button>
-				</td>
-			</tr>
-		<% } %>
+		{{each rows}}
+		<tr>
+			<td>{{$value.username}}</td>
+			<td>{{$value.mobile}}</td>
+			<td>{{$value.isDelete==1?'已启用':'已禁用'}}</td>
+			<td>
+				<button data-id="{{$value.id}}" data-isdelete="{{$value.isDelete}}" id='status' type="button" class="btn {{$value.isDelete==1?'btn-danger':'btn-success'}}">{{$value.isDelete==1?'禁用':'启用'}}</button>
+			</td>
+		</tr>
+		{{/each}}
 	</script>
 </body>
 </html>

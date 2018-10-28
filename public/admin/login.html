@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>乐淘-后台管理登录</title>
+	<title>云购-后台管理登录</title>
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/login.css">
@@ -17,7 +17,7 @@
 	        <div class="col-sm-6 position">
 	        	<div class="form-top">
 	        		<div class="form-top-left">
-	        			<h3>登录乐淘后台管理系统</h3>
+	        			<h3>登录云购后台管理系统</h3>
 	            		<p>请输入您的用户名和密码</p>
 	        		</div>
 	        		<div class="form-top-right">
@@ -27,12 +27,12 @@
 	            <div class="form-bottom">
 	                <form role="form" action="" method="post" class="login-form">
 	                	<div class="form-group">
-	                    	<input type="text" placeholder="用户名..." class="form-username form-control" id="username">
+	                    	<input id="username" type="text" placeholder="用户名..." class="form-username form-control">
 	                    </div>
 	                    <div class="form-group">
-	                    	<input type="password" placeholder="密码..." class="form-password form-control" id="password">
+	                    	<input id="password" type="password" placeholder="密码..." class="form-password form-control">
 	                    </div>
-	                    <button type="button" class="btn btn-primary" id="loginBtn">登录</button>
+	                    <button type="submit" class="btn btn-primary" onclick="return false">登录</button>
 	                </form>
 	            </div>
 	        </div>

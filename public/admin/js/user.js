@@ -1,56 +1,42 @@
 $(function(){
+    var page=1;
+    var pageSize=10;
 
-	$.ajax({
-		url:'/user/queryUser',
-		type:'get',
-		data:{
-			page:1,
-			pageSize:10
-		},
-		success:function(result){
+    getUser();
 
-			console.log(result)
+    $('#userList').on('click','#status',function(){
+    
+        var id=$(this).data('id');
+        var isDelete=parseInt($(this).data('isdelete'))?0:1;
+        console.log(isDelete);
+        $.ajax({
+            type:'post',
+            url:'/user/updateUser',
+            data:{
+                id:id,
+                isDelete:isDelete
+            },
+            success:function(res){
+                if(res.success){
+                    location.reload();
+                }
+            }
+        })
+    })
 
-			$('#userBox').html(template('userTpl',{data:result}));
-
-		}
-	});
-
-
-	$('body').on('click','#deleteBtn',function(){
-
-		var id = $(this).attr('data-id');
-		var isDelete = Number($(this).attr('data-isDelete')) ? 0 : 1;
-
-		alert(isDelete)
-
-		$.ajax({
-			url:'/user/updateUser',
-			type:'post',
-			data:{
-				id:id,
-				isDelete:isDelete
-			},
-			success:function(result){
-
-				if(result.success){
-
-					location.reload()
-
-				}else{
-
-					if(result.error){
-
-						alert(result.message);
-
-					}
-
-				}
-
-			}
-		})
-
-	});
-
-
-});
+    function getUser(){
+        $.ajax({
+            type:'get',
+            url:'/user/queryUser',
+            data:{
+                page:1,
+                pageSize:10,
+            },
+            success:function(res){
+                console.log(res);
+                var html=template('employeeTpl',res);
+                $('#userList').html(html);
+            }
+        })
+    }
+})
