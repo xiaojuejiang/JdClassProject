@@ -27,3 +27,4 @@ $(function(){
         location.href=this.href;
     })
 })
+// 闭包可以模拟出js中没有的私有成员

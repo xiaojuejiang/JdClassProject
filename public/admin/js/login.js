@@ -1,66 +1,30 @@
-$(function(){
+$(function () {
+    $('button').on('click', function () {
+        var username = $('#username').val();
+        var password = $('#password').val();
 
-	$.ajax({
-		url:'/employee/checkRootLogin',
-		type:'get',
-		success:function(result){
+        if (!username.trim().length) {
+            return $('.form-top-left p').html('请输入用户名');
+        }
+        if (!password.trim().length) {
+            return $('.form-top-left p').html('请输入密码');
+        }
+        $.ajax({
+            type: 'post',
+            url: '/employee/employeeLogin',
+            data: {
+                username: username,
+                password: password
+            },
+            success: function (res) {
+                console.log(res)
+                if (res.error) {
+                    return $('.form-top-left p').html(res.message);
+                }else{
+                    location.href='user.html'
+                }
+            }
+        })
+    })
 
-			if(result.success){
-
-				location.href = "user.html";
-
-			}
-
-		}
-	})
-
-
-	$('#loginBtn').on('click',function(){
-
-		var data = {
-			username:$.trim($('#username').val()),
-			password:$.trim($('#password').val())
-		}
-
-		if(!data.username){
-
-			alert('请填写用户名');
-
-			return;
-
-		}
-
-		if(!data.password){
-
-			alert('请填写密码');
-
-			return;
-
-		}
-
-		$.ajax({
-			type:'post',
-			url:'/employee/employeeLogin',
-			data:data,
-			success:function(result){
-
-				if(result.success){
-
-					location.href = "user.html";
-
-				}else{
-
-					if(result.error){
-
-						alert(result.message)
-
-					}
-
-				}
-
-			}
-		})
-
-	});
-
-});
+})
