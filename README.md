@@ -4,7 +4,7 @@
 
 ## 技术栈
 
-node + vue + router + vue-router+ mui +  zepto  +  less + ES6/7 
+node + vue + router + mui +  zepto  +  less + ES6/7 
 
 ## 每日任务
 
